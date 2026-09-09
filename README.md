@@ -2,7 +2,7 @@
 
 I built this lightweight, transparent Windows 10/11 system tuning utility to safely optimize performance without installing background bloatware or running persistent "booster" services.
 
-Unlike third-party optimization tools that consume system resources in the background or apply snake-oil registry tweaks, this script uses evidence-based native configurations, creates complete backups, and leaves no residual services running.
+Unlike third-party optimization tools that consume system resources in the background or apply snake-oil registry tweaks, this script uses evidence-based native configurations, creates complete backups, and is fully reversible.
 
 ## What It Does
 
@@ -29,34 +29,26 @@ Unlike third-party optimization tools that consume system resources in the backg
 Your data and system stability are the top priorities:
 - **Automatic Registry Backups:** Before making any change, the script exports every registry key it touches into a local backup folder (`C:\ProgramData\WindowsOptimizer`).
 - **System Restore Point:** Automatically attempts to create a Windows System Restore point before applying modifications.
-- **Zero Data Loss:** The script never deletes personal files, documents, photos, or app data. File cleanup is restricted strictly to standard temporary directories (`%TEMP%`, `C:\Windows\Temp`, and user profile temporary folders).
+- **Zero Data Loss:** The script never deletes personal files, documents, photos, or app data. File cleanup is restricted strictly to standard temporary directories (`%TEMP%`, `C:\Windows\Temp`, and Delivery Optimization cache).
 - **Fully Reversible:** You can restore your previous system state at any time with a single command.
 
 ---
 
 ## Installation & Running Guide (For Beginners)
 
-You do not need any technical knowledge to run this utility. Just follow these steps:
+You do not need any technical knowledge to run this utility. Just follow these 4 simple steps:
 
-### Step 1: Download the Script
-1. Download or copy `Windows-Performance-Optimizer.ps1` to your computer (for example, save it to your Desktop).
+### Step 1: Download
+Download `Windows-Performance-Optimizer.ps1` and save it to your computer (e.g., Desktop, Downloads, or any folder).
 
-### Step 2: Open PowerShell as Administrator
-1. Press the **Windows Key** on your keyboard.
-2. Type `powershell`.
-3. Right-click on **Windows PowerShell** in the search results and select **Run as administrator**.
-4. Click **Yes** if a prompt asks for permission to make changes.
+### Step 2: Right-Click and Run with PowerShell
+Locate the downloaded file, right-click on it, and select **"Run with PowerShell"**.
 
-### Step 3: Run the Optimizer
-1. Navigate to the folder where you saved the script. If you saved it on your Desktop, type the following command and press **Enter**:
-   ```powershell
-   cd "$env:USERPROFILE\Desktop"
-   ```
-2. Run the optimizer script by typing:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\Windows-Performance-Optimizer.ps1
-   ```
-3. The script will automatically request administrator privileges if needed, create a backup and restore point, apply the performance tuning, and log everything.
+### Step 3: Tap Yes If Prompts Appear
+If any permission prompts appear on your screen, click **"Yes"** to allow the script to run with administrator privileges.
+
+### Step 4: Wait
+The script will now run automatically. Just wait for it to complete—it will optimize your system, create backups, and apply all performance improvements. Once finished, your system is ready!
 
 ---
 
